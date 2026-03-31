@@ -294,3 +294,111 @@ if (time >= 0 && time < 1200) {
 } else {
     document.writeln("Invalid time format. Please enter a valid time in 24-hour format.");
 }
+
+// Chapter 14-16
+// ans 1
+var studentNames = [];
+
+// ans 2
+var studentNames = new Array();
+
+// ans 3
+var stringsArray = ["Hello", "World", "JavaScript"];
+
+// ans 4
+var numbersArray = [1, 2, 3, 4, 5];
+
+// ans 5
+var booleanArray = [true, false, true];
+
+// ans 6
+var mixedArray = ["Hello", 42, true, "World", 3.14];
+
+// ans 7
+var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+document.writeln("<h1>Qualifications:</h1><br>");
+for (var i = 0; i < qualifications.length; i++) {
+    document.writeln((i + 1) + ") " + qualifications[i] + "<br>");
+}
+
+// ans 8
+var studentNames = ["Michael", "John", "Tony"];
+var studentScores = [320, 230, 480];
+var totalMarks = 500;
+for (var i = 0; i < studentNames.length; i++) {
+    var percentage = (studentScores[i] / totalMarks) * 100;
+    document.writeln("Score of " + studentNames[i] + " is " + studentScores[i] + ". Percentage: " + percentage.toFixed(2) + "%<br>");
+}
+
+// ans 9
+var colorNames = ["Red", "Green", "Blue"];
+document.writeln("Initial array: " + colorNames.join(", ") + "<br><br>");
+var colorToAddStart = prompt("Enter a color to add at the beginning:");
+colorNames.unshift(colorToAddStart);
+document.writeln("After adding color at the beginning: " + colorNames.join(", ") + "<br><br>");
+var colorToAddEnd = prompt("Enter a color to add at the end:");
+colorNames.push(colorToAddEnd);
+document.writeln("After adding color at the end: " + colorNames.join(", ") + "<br><br>");
+var colorToAddStart2 = prompt("Enter two colors to add at the beginning:");
+colorNames.unshift(colorToAddStart2);
+document.writeln("After adding two colors at the beginning: " + colorNames.join(", ") + "<br><br>");
+colorNames.shift();
+document.writeln("After removing the first color: " + colorNames.join(", ") + "<br><br>");
+colorNames.pop();
+document.writeln("After removing the last color: " + colorNames.join(", ") + "<br><br>");
+var indexToAdd = +prompt("Enter the index number to add a color:");
+var colorToAddIndex = prompt("Enter a color to add at index " + indexToAdd + ":");
+colorNames.splice(indexToAdd, 0, colorToAddIndex);
+document.writeln("After adding color at index " + indexToAdd + ": " + colorNames.join(", ") + "<br><br>");
+var indexToRemove = +prompt("Enter the index number to remove a color:");
+var numColorsToRemove = +prompt("Enter the number of colors to remove from index " + indexToRemove + ":");
+colorNames.splice(indexToRemove, numColorsToRemove);
+document.writeln("After removing " + numColorsToRemove + " color(s) from index " + indexToRemove + ": " + colorNames.join(", ") + "<br><br>");
+
+// ans 10
+var studentScores = [320, 230, 480, 120];
+document.writeln("Scores of students: " + studentScores.join(", ") + "<br><br>");
+studentScores.sort(function(a, b) {
+    return a - b;
+});
+document.writeln("Ordered scores of students: " + studentScores.join(", ") + "<br><br>");
+
+// ans 11
+var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+document.writeln("Cities list: " + cities.join(", ") + "<br><br>");
+var selectedCities = cities.slice(2, 4);
+document.writeln("Selected cities list: " + selectedCities.join(", ") + "<br><br>");
+
+// ans 12
+var arr = ["This", "is", "my", "cat"];
+document.writeln("Array: " + arr.join(", ") + "<br><br>");
+var joinedString = arr.join(" ");
+document.writeln("String: " + joinedString + "<br><br>");
+
+// ans 13
+var devices = ["Keyboard", "Mouse", "Printer", "Monitor"];
+document.writeln("Devices: " + devices.join(", ") + "<br><br>");
+var fifoDevice = devices.shift();
+document.writeln("Out:<br>" + fifoDevice + "<br>");
+fifoDevice = devices.shift();
+document.writeln("Out:<br>" + fifoDevice + "<br>");
+fifoDevice = devices.shift();
+document.writeln("Out: <br>" + fifoDevice + "<br>");
+fifoDevice = devices.shift();
+document.writeln("Out: <br>" + fifoDevice + "<br><br>");
+
+// ans 14
+var devices = ["Keyboard", "Mouse", "Printer", "Monitor"];
+document.writeln("Devices: " + devices.join(", ") + "<br><br>");
+var lifoDevice = devices.pop();
+document.writeln("Out:<br>" + lifoDevice + "<br>");
+lifoDevice = devices.pop();
+document.writeln("Out:<br>" + lifoDevice + "<br>");
+lifoDevice = devices.pop();
+document.writeln("Out:<br>" + lifoDevice + "<br>");
+lifoDevice = devices.pop();
+document.writeln("Out:<br>" + lifoDevice + "<br><br>");
+
+// ans 15
+var manufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+document.writeln("<select><option>" + manufacturers.join("</option><option>") + "</option></select><br><br>");
