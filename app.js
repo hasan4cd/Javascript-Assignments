@@ -508,26 +508,216 @@
 //     }
 // }
 
-// Eid Countdown Timer
-function startCountdown() {
-      const eidDate = new Date("May 27, 2026 00:00:00").getTime();
+// // Eid Countdown Timer
+// function startCountdown() {
+//       const eidDate = new Date("May 27, 2026 00:00:00").getTime();
 
-      setInterval(() => {
-        const now = new Date().getTime();
-        const diff = eidDate - now;
+//       setInterval(() => {
+//         const now = new Date().getTime();
+//         const diff = eidDate - now;
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
+//         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+//         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+//         const minutes = Math.floor((diff / (1000 * 60)) % 60);
+//         const seconds = Math.floor((diff / 1000) % 60);
 
-        document.getElementById("timer").innerHTML =
-          days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+//         document.getElementById("timer").innerHTML =
+//           days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
 
-        if (diff < 0) {
-          document.getElementById("timer").innerHTML = "Eid Mubarak to everyone!";
-        }
-      }, 1000);
-    }
+//         if (diff < 0) {
+//           document.getElementById("timer").innerHTML = "Eid Mubarak to everyone!";
+//         }
+//       }, 1000);
+//     }
 
-    startCountdown();
+//     startCountdown();
+
+// Chapter 21-25
+// ans 1
+var firstName = prompt("Enter your first name:");
+var lastName = prompt("Enter your last name:");
+var fullName = firstName + " " + lastName;
+document.writeln("Hello, " + fullName + "! Welcome to our website.<br><br>");
+
+// ans 2
+var favoriteMobile = prompt("Enter your favorite mobile phone model:");
+document.writeln("My favorite phone is: " + favoriteMobile + "<br>");
+document.writeln("Length of string: " + favoriteMobile.length + "<br><br>");
+
+// ans 3
+var word = "Pakistani";
+document.writeln("String: " + word + "<br>");
+document.writeln("Index of 'n': " + word.indexOf("n") + "<br><br>");
+
+// ans 4
+var word = "Hello World";
+document.writeln("String: " + word + "<br>");
+document.writeln("Last index of 'l': " + word.lastIndexOf("l") + "<br><br>");
+
+// ans 5
+var word = "Pakistani";
+document.writeln("String: " + word + "<br>");
+document.writeln("Character at index 3: " + word.charAt(3) + "<br><br>");
+
+// ans 6
+var firstName = prompt("Enter your first name:");
+var lastName = prompt("Enter your last name:");
+var fullName = firstName.concat(" ", lastName);
+document.writeln("Hello, " + fullName + "! Welcome to our website.<br><br>");
+
+// ans 7
+var city = "Hyderabad";
+document.writeln("City: " + city + "<br>");
+var newCity = city.replace("Hyder", "Islam");
+document.writeln("After replacement: " + newCity + "<br><br>");
+
+// ans 8
+var message = "Ali and Sami are best friends. They play cricket and football together.";
+document.writeln("Message: " + message + "<br>");
+var newMessage = message.replace(/and/g, "&");
+document.writeln("After replacement: " + newMessage + "<br><br>");
+
+// ans 9
+var numString = "472";
+document.writeln("Value: " + numString + "<br>");
+
+var num = parseInt(numString);
+document.writeln("Type: " + typeof num + "<br><br>");
+
+// ans 10
+var userInput = prompt("Enter a string:");
+document.writeln("User input: " + userInput + "<br>");
+var upperCaseInput = userInput.toUpperCase();
+document.writeln("Upper case: " + upperCaseInput + "<br><br>");
+
+// ans 11
+var userInput = prompt("Enter a string:");
+document.writeln("User input: " + userInput + "<br>");
+
+var titleCaseInput = userInput.toLowerCase().split(" ").map(function(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}).join(" ");
+
+document.writeln("Title case: " + titleCaseInput + "<br><br>");
+
+// ans 12
+var num = 35.36;
+document.writeln("Number: " + num + "<br>");
+var numString = num.toString().replace(".", "");
+document.writeln("Result: " + numString + "<br><br>");
+
+// ans 13
+var username = prompt("Enter a username:");
+if (username.includes("@") || username.includes(".") || username.includes(",") || username.includes("!")) {
+    document.writeln("Please enter a valid username without special characters (@ . , !)<br><br>");
+} else {
+    document.writeln("Username is valid.<br><br>");
+}
+
+// ans 14
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var userAnswer = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?").toLowerCase();
+document.writeln("<br><br>");
+
+if (A.includes(userAnswer)) {
+    document.writeln(`${userAnswer} is <b>available</b> at index ${A.indexOf(userAnswer)} in our bakery<br><br>`);
+} else {
+    document.writeln(`We are sorry. ${userAnswer} is <b>not available</b> in our bakery<br><br>`);
+}
+
+// ans 15
+var password = prompt("Enter a password:");
+var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
+if (!passwordPattern.test(password)) {
+    document.writeln("Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter, and one number.<br><br>");
+} else {
+    document.writeln("Password is valid.<br><br>");
+}
+
+// ans 16
+var university = "University of Karachi";
+var characters = university.split("");
+
+document.writeln("University: " + university + "<br>");
+document.writeln("Characters:<br>");
+for (var i = 0; i < characters.length; i++) {
+    document.writeln(characters[i] + "<br>");
+}
+
+// ans 17
+var userInput = prompt("Enter a string:");
+document.writeln("User input: " + userInput + "<br>");
+var lastCharacter = userInput.charAt(userInput.length - 1);
+document.writeln("Last character of input: " + lastCharacter + "<br><br>");
+
+// ans 18
+var text = "The quick brown fox jumps over the lazy dog";
+document.writeln("Text: " + text + "<br>");
+var wordToCount = "the";
+var regex = new RegExp("\\b" + wordToCount + "\\b", "gi");
+var matches = text.match(regex);
+var count = matches ? matches.length : 0;
+
+document.writeln("There are " + count + " occurrences of the word '" + wordToCount + "' in the text.<br><br>");
+
+// Chapter 26-30
+// ans 1
+var positiveInteger = +prompt("Enter a positive integer:");
+
+if (positiveInteger > 0) {
+    document.writeln("Number: " + positiveInteger + "<br>");
+    document.writeln("Round off value: " + Math.round(positiveInteger) + "<br>");
+    document.writeln("Floor value: " + Math.floor(positiveInteger) + "<br>");
+    document.writeln("Ceil value: " + Math.ceil(positiveInteger) + "<br><br>");
+} else {
+    document.writeln("Please enter a positive integer.<br><br>");
+}
+
+// ans 2
+var negativeFloat = +prompt("Enter a negative floating-point number:");
+
+if (negativeFloat < 0) {
+    document.writeln("Number: " + negativeFloat + "<br>");
+    document.writeln("Round off value: " + Math.round(negativeFloat) + "<br>");
+    document.writeln("Floor value: " + Math.floor(negativeFloat) + "<br>");
+    document.writeln("Ceil value: " + Math.ceil(negativeFloat) + "<br><br>");
+} else {
+    document.writeln("Please enter a negative floating-point number.<br><br>");
+}
+
+// ans 3
+var number = +prompt("Enter a number:");
+document.writeln("The absolute value of " + number + " is " + Math.abs(number) + "<br><br>");
+
+// ans 4
+var randomDice = Math.floor(Math.random() * 6) + 1;
+document.writeln("Random dice value: " + randomDice + "<br><br>");
+
+// ans 5
+var randomCoin = Math.floor(Math.random() * 2) + 1;
+var coinSide = randomCoin === 1 ? "Heads" : "Tails";
+document.writeln("Random coin value: " + coinSide + "<br><br>");
+
+// ans 6
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+document.writeln("Random number between 1 and 100: " + randomNumber + "<br><br>");
+
+// ans 7
+var userWeight = prompt("Enter your weight in kilograms:");
+var weightInKg = parseFloat(userWeight);
+if (!isNaN(weightInKg)) {
+    document.writeln("The weight of the user is " + weightInKg + " kilograms.<br><br>");
+} else {
+    document.writeln("Please enter a valid weight in kilograms.<br><br>");
+}
+
+// ans 8
+var secretNumber = Math.floor(Math.random() * 10) + 1;
+var userGuess = +prompt("Guess the secret number between 1 and 10:");
+
+if (userGuess === secretNumber) {
+    document.writeln("Congratulations! You guessed the secret number.<br><br>");
+} else {
+    document.writeln("Sorry, the secret number was " + secretNumber + ". Try again!<br><br>");
+}
