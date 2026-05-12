@@ -532,192 +532,488 @@
 
 //     startCountdown();
 
-// Chapter 21-25
-// ans 1
-var firstName = prompt("Enter your first name:");
-var lastName = prompt("Enter your last name:");
-var fullName = firstName + " " + lastName;
-document.writeln("Hello, " + fullName + "! Welcome to our website.<br><br>");
+// // Chapter 21-25
+// // ans 1
+// var firstName = prompt("Enter your first name:");
+// var lastName = prompt("Enter your last name:");
+// var fullName = firstName + " " + lastName;
+// document.writeln("Hello, " + fullName + "! Welcome to our website.<br><br>");
 
-// ans 2
-var favoriteMobile = prompt("Enter your favorite mobile phone model:");
-document.writeln("My favorite phone is: " + favoriteMobile + "<br>");
-document.writeln("Length of string: " + favoriteMobile.length + "<br><br>");
+// // ans 2
+// var favoriteMobile = prompt("Enter your favorite mobile phone model:");
+// document.writeln("My favorite phone is: " + favoriteMobile + "<br>");
+// document.writeln("Length of string: " + favoriteMobile.length + "<br><br>");
 
-// ans 3
-var word = "Pakistani";
-document.writeln("String: " + word + "<br>");
-document.writeln("Index of 'n': " + word.indexOf("n") + "<br><br>");
+// // ans 3
+// var word = "Pakistani";
+// document.writeln("String: " + word + "<br>");
+// document.writeln("Index of 'n': " + word.indexOf("n") + "<br><br>");
 
-// ans 4
-var word = "Hello World";
-document.writeln("String: " + word + "<br>");
-document.writeln("Last index of 'l': " + word.lastIndexOf("l") + "<br><br>");
+// // ans 4
+// var word = "Hello World";
+// document.writeln("String: " + word + "<br>");
+// document.writeln("Last index of 'l': " + word.lastIndexOf("l") + "<br><br>");
 
-// ans 5
-var word = "Pakistani";
-document.writeln("String: " + word + "<br>");
-document.writeln("Character at index 3: " + word.charAt(3) + "<br><br>");
+// // ans 5
+// var word = "Pakistani";
+// document.writeln("String: " + word + "<br>");
+// document.writeln("Character at index 3: " + word.charAt(3) + "<br><br>");
 
-// ans 6
-var firstName = prompt("Enter your first name:");
-var lastName = prompt("Enter your last name:");
-var fullName = firstName.concat(" ", lastName);
-document.writeln("Hello, " + fullName + "! Welcome to our website.<br><br>");
+// // ans 6
+// var firstName = prompt("Enter your first name:");
+// var lastName = prompt("Enter your last name:");
+// var fullName = firstName.concat(" ", lastName);
+// document.writeln("Hello, " + fullName + "! Welcome to our website.<br><br>");
 
-// ans 7
-var city = "Hyderabad";
-document.writeln("City: " + city + "<br>");
-var newCity = city.replace("Hyder", "Islam");
-document.writeln("After replacement: " + newCity + "<br><br>");
+// // ans 7
+// var city = "Hyderabad";
+// document.writeln("City: " + city + "<br>");
+// var newCity = city.replace("Hyder", "Islam");
+// document.writeln("After replacement: " + newCity + "<br><br>");
 
-// ans 8
-var message = "Ali and Sami are best friends. They play cricket and football together.";
-document.writeln("Message: " + message + "<br>");
-var newMessage = message.replace(/and/g, "&");
-document.writeln("After replacement: " + newMessage + "<br><br>");
+// // ans 8
+// var message = "Ali and Sami are best friends. They play cricket and football together.";
+// document.writeln("Message: " + message + "<br>");
+// var newMessage = message.replace(/and/g, "&");
+// document.writeln("After replacement: " + newMessage + "<br><br>");
 
-// ans 9
-var numString = "472";
-document.writeln("Value: " + numString + "<br>");
+// // ans 9
+// var numString = "472";
+// document.writeln("Value: " + numString + "<br>");
 
-var num = parseInt(numString);
-document.writeln("Type: " + typeof num + "<br><br>");
+// var num = parseInt(numString);
+// document.writeln("Type: " + typeof num + "<br><br>");
 
-// ans 10
-var userInput = prompt("Enter a string:");
-document.writeln("User input: " + userInput + "<br>");
-var upperCaseInput = userInput.toUpperCase();
-document.writeln("Upper case: " + upperCaseInput + "<br><br>");
+// // ans 10
+// var userInput = prompt("Enter a string:");
+// document.writeln("User input: " + userInput + "<br>");
+// var upperCaseInput = userInput.toUpperCase();
+// document.writeln("Upper case: " + upperCaseInput + "<br><br>");
 
-// ans 11
-var userInput = prompt("Enter a string:");
-document.writeln("User input: " + userInput + "<br>");
+// // ans 11
+// var userInput = prompt("Enter a string:");
+// document.writeln("User input: " + userInput + "<br>");
 
-var titleCaseInput = userInput.toLowerCase().split(" ").map(function(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-}).join(" ");
+// var titleCaseInput = userInput.toLowerCase().split(" ").map(function(word) {
+//     return word.charAt(0).toUpperCase() + word.slice(1);
+// }).join(" ");
 
-document.writeln("Title case: " + titleCaseInput + "<br><br>");
+// document.writeln("Title case: " + titleCaseInput + "<br><br>");
 
-// ans 12
-var num = 35.36;
-document.writeln("Number: " + num + "<br>");
-var numString = num.toString().replace(".", "");
-document.writeln("Result: " + numString + "<br><br>");
+// // ans 12
+// var num = 35.36;
+// document.writeln("Number: " + num + "<br>");
+// var numString = num.toString().replace(".", "");
+// document.writeln("Result: " + numString + "<br><br>");
 
-// ans 13
-var username = prompt("Enter a username:");
-if (username.includes("@") || username.includes(".") || username.includes(",") || username.includes("!")) {
-    document.writeln("Please enter a valid username without special characters (@ . , !)<br><br>");
-} else {
-    document.writeln("Username is valid.<br><br>");
-}
+// // ans 13
+// var username = prompt("Enter a username:");
+// if (username.includes("@") || username.includes(".") || username.includes(",") || username.includes("!")) {
+//     document.writeln("Please enter a valid username without special characters (@ . , !)<br><br>");
+// } else {
+//     document.writeln("Username is valid.<br><br>");
+// }
 
-// ans 14
-var A = ["cake", "apple pie", "cookie", "chips", "patties"];
-var userAnswer = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?").toLowerCase();
-document.writeln("<br><br>");
+// // ans 14
+// var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+// var userAnswer = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?").toLowerCase();
+// document.writeln("<br><br>");
 
-if (A.includes(userAnswer)) {
-    document.writeln(`${userAnswer} is <b>available</b> at index ${A.indexOf(userAnswer)} in our bakery<br><br>`);
-} else {
-    document.writeln(`We are sorry. ${userAnswer} is <b>not available</b> in our bakery<br><br>`);
-}
+// if (A.includes(userAnswer)) {
+//     document.writeln(`${userAnswer} is <b>available</b> at index ${A.indexOf(userAnswer)} in our bakery<br><br>`);
+// } else {
+//     document.writeln(`We are sorry. ${userAnswer} is <b>not available</b> in our bakery<br><br>`);
+// }
 
-// ans 15
-var password = prompt("Enter a password:");
-var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
+// // ans 15
+// var password = prompt("Enter a password:");
+// var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
-if (!passwordPattern.test(password)) {
-    document.writeln("Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter, and one number.<br><br>");
-} else {
-    document.writeln("Password is valid.<br><br>");
-}
+// if (!passwordPattern.test(password)) {
+//     document.writeln("Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter, and one number.<br><br>");
+// } else {
+//     document.writeln("Password is valid.<br><br>");
+// }
 
-// ans 16
-var university = "University of Karachi";
-var characters = university.split("");
+// // ans 16
+// var university = "University of Karachi";
+// var characters = university.split("");
 
-document.writeln("University: " + university + "<br>");
-document.writeln("Characters:<br>");
-for (var i = 0; i < characters.length; i++) {
-    document.writeln(characters[i] + "<br>");
-}
+// document.writeln("University: " + university + "<br>");
+// document.writeln("Characters:<br>");
+// for (var i = 0; i < characters.length; i++) {
+//     document.writeln(characters[i] + "<br>");
+// }
 
-// ans 17
-var userInput = prompt("Enter a string:");
-document.writeln("User input: " + userInput + "<br>");
-var lastCharacter = userInput.charAt(userInput.length - 1);
-document.writeln("Last character of input: " + lastCharacter + "<br><br>");
+// // ans 17
+// var userInput = prompt("Enter a string:");
+// document.writeln("User input: " + userInput + "<br>");
+// var lastCharacter = userInput.charAt(userInput.length - 1);
+// document.writeln("Last character of input: " + lastCharacter + "<br><br>");
 
-// ans 18
-var text = "The quick brown fox jumps over the lazy dog";
-document.writeln("Text: " + text + "<br>");
-var wordToCount = "the";
-var regex = new RegExp("\\b" + wordToCount + "\\b", "gi");
-var matches = text.match(regex);
-var count = matches ? matches.length : 0;
+// // ans 18
+// var text = "The quick brown fox jumps over the lazy dog";
+// document.writeln("Text: " + text + "<br>");
+// var wordToCount = "the";
+// var regex = new RegExp("\\b" + wordToCount + "\\b", "gi");
+// var matches = text.match(regex);
+// var count = matches ? matches.length : 0;
 
-document.writeln("There are " + count + " occurrences of the word '" + wordToCount + "' in the text.<br><br>");
+// document.writeln("There are " + count + " occurrences of the word '" + wordToCount + "' in the text.<br><br>");
 
-// Chapter 26-30
-// ans 1
-var positiveInteger = +prompt("Enter a positive integer:");
+// // Chapter 26-30
+// // ans 1
+// var positiveInteger = +prompt("Enter a positive integer:");
 
-if (positiveInteger > 0) {
-    document.writeln("Number: " + positiveInteger + "<br>");
-    document.writeln("Round off value: " + Math.round(positiveInteger) + "<br>");
-    document.writeln("Floor value: " + Math.floor(positiveInteger) + "<br>");
-    document.writeln("Ceil value: " + Math.ceil(positiveInteger) + "<br><br>");
-} else {
-    document.writeln("Please enter a positive integer.<br><br>");
-}
+// if (positiveInteger > 0) {
+//     document.writeln("Number: " + positiveInteger + "<br>");
+//     document.writeln("Round off value: " + Math.round(positiveInteger) + "<br>");
+//     document.writeln("Floor value: " + Math.floor(positiveInteger) + "<br>");
+//     document.writeln("Ceil value: " + Math.ceil(positiveInteger) + "<br><br>");
+// } else {
+//     document.writeln("Please enter a positive integer.<br><br>");
+// }
 
-// ans 2
-var negativeFloat = +prompt("Enter a negative floating-point number:");
+// // ans 2
+// var negativeFloat = +prompt("Enter a negative floating-point number:");
 
-if (negativeFloat < 0) {
-    document.writeln("Number: " + negativeFloat + "<br>");
-    document.writeln("Round off value: " + Math.round(negativeFloat) + "<br>");
-    document.writeln("Floor value: " + Math.floor(negativeFloat) + "<br>");
-    document.writeln("Ceil value: " + Math.ceil(negativeFloat) + "<br><br>");
-} else {
-    document.writeln("Please enter a negative floating-point number.<br><br>");
-}
+// if (negativeFloat < 0) {
+//     document.writeln("Number: " + negativeFloat + "<br>");
+//     document.writeln("Round off value: " + Math.round(negativeFloat) + "<br>");
+//     document.writeln("Floor value: " + Math.floor(negativeFloat) + "<br>");
+//     document.writeln("Ceil value: " + Math.ceil(negativeFloat) + "<br><br>");
+// } else {
+//     document.writeln("Please enter a negative floating-point number.<br><br>");
+// }
 
-// ans 3
-var number = +prompt("Enter a number:");
-document.writeln("The absolute value of " + number + " is " + Math.abs(number) + "<br><br>");
+// // ans 3
+// var number = +prompt("Enter a number:");
+// document.writeln("The absolute value of " + number + " is " + Math.abs(number) + "<br><br>");
 
-// ans 4
-var randomDice = Math.floor(Math.random() * 6) + 1;
-document.writeln("Random dice value: " + randomDice + "<br><br>");
+// // ans 4
+// var randomDice = Math.floor(Math.random() * 6) + 1;
+// document.writeln("Random dice value: " + randomDice + "<br><br>");
 
-// ans 5
-var randomCoin = Math.floor(Math.random() * 2) + 1;
-var coinSide = randomCoin === 1 ? "Heads" : "Tails";
-document.writeln("Random coin value: " + coinSide + "<br><br>");
+// // ans 5
+// var randomCoin = Math.floor(Math.random() * 2) + 1;
+// var coinSide = randomCoin === 1 ? "Heads" : "Tails";
+// document.writeln("Random coin value: " + coinSide + "<br><br>");
 
-// ans 6
-var randomNumber = Math.floor(Math.random() * 100) + 1;
-document.writeln("Random number between 1 and 100: " + randomNumber + "<br><br>");
+// // ans 6
+// var randomNumber = Math.floor(Math.random() * 100) + 1;
+// document.writeln("Random number between 1 and 100: " + randomNumber + "<br><br>");
 
-// ans 7
-var userWeight = prompt("Enter your weight in kilograms:");
-var weightInKg = parseFloat(userWeight);
-if (!isNaN(weightInKg)) {
-    document.writeln("The weight of the user is " + weightInKg + " kilograms.<br><br>");
-} else {
-    document.writeln("Please enter a valid weight in kilograms.<br><br>");
-}
+// // ans 7
+// var userWeight = prompt("Enter your weight in kilograms:");
+// var weightInKg = parseFloat(userWeight);
+// if (!isNaN(weightInKg)) {
+//     document.writeln("The weight of the user is " + weightInKg + " kilograms.<br><br>");
+// } else {
+//     document.writeln("Please enter a valid weight in kilograms.<br><br>");
+// }
 
-// ans 8
-var secretNumber = Math.floor(Math.random() * 10) + 1;
-var userGuess = +prompt("Guess the secret number between 1 and 10:");
+// // ans 8
+// var secretNumber = Math.floor(Math.random() * 10) + 1;
+// var userGuess = +prompt("Guess the secret number between 1 and 10:");
 
-if (userGuess === secretNumber) {
-    document.writeln("Congratulations! You guessed the secret number.<br><br>");
-} else {
-    document.writeln("Sorry, the secret number was " + secretNumber + ". Try again!<br><br>");
-}
+// if (userGuess === secretNumber) {
+//     document.writeln("Congratulations! You guessed the secret number.<br><br>");
+// } else {
+//     document.writeln("Sorry, the secret number was " + secretNumber + ". Try again!<br><br>");
+// }
+
+// // Chapter 31-34
+// // ans 1
+// var currentDate = new Date();
+// document.writeln(currentDate + "<br><br>");
+
+// // ans 2
+// var currentMonth = currentDate.getMonth();
+// var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// document.writeln("Current month: " + monthNames[currentMonth] + "<br><br>");
+
+// // ans 3
+// var currentDay = currentDate.getDay();
+// var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+// document.writeln("Today is " + dayNames[currentDay] + "<br><br>");
+
+// // ans 4
+// if (currentDay === 0 || currentDay === 6) {
+//     document.writeln("It's fun day!<br><br>");
+// } else {
+//     document.writeln("It's working day.<br><br>");
+// }
+
+// // ans 5
+// var currentDate = new Date();
+// var currentDayOfMonth = currentDate.getDate();
+// if (currentDayOfMonth < 16) {
+//     document.writeln("First fifteen days of the month.<br><br>");
+// } else {
+//     document.writeln("Last days of the month.<br><br>");
+// }
+
+// // ans 6
+// var currentDate = new Date();
+// var currentTime = currentDate.getTime();
+// var hours = Math.floor(currentTime / (1000 * 60 * 60));
+// document.writeln("Current time: " + currentTime + " milliseconds since January 1, 1970.<br>");
+// document.writeln("Current hour: " + hours + " hours since January 1, 1970.<br><br>");
+
+// // ans 7
+// var currentDate = new Date();
+// var currentHour = currentDate.getHours();
+// if (currentHour < 12) {
+//     document.writeln("It's AM.<br><br>");
+// } else {
+//     document.writeln("It's PM.<br><br>");
+// }
+
+// // ans 8
+// var laterDate = new Date("December 31, 2020");
+// document.writeln("Later date: " + laterDate + "<br><br>");
+
+// // ans 9
+// var ramadanStart = new Date("June 18, 2015");
+// var currentDate = new Date();
+// var timeDiff = currentDate.getTime() - ramadanStart.getTime();
+// var daysPassed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+// document.writeln(daysPassed + " days have passed since 1st Ramadan, 2015.<br><br>");
+
+// // ans 10
+// var referenceDate = new Date("January 1, 2015");
+// var currentDate = new Date();
+// var timeDiff = currentDate.getTime() - referenceDate.getTime();
+// var secondsPassed = Math.floor(timeDiff / 1000);
+// document.writeln("Seconds passed since January 1, 2015: " + secondsPassed + " seconds.<br><br>");
+
+// // ans 11
+// var currentDate = new Date();
+// var oneHourAgo = new Date(currentDate.getTime() - (1000 * 60 * 60));
+// document.writeln("Current date: " + currentDate + "<br>");
+// document.writeln("1 hour ago, it was: " + oneHourAgo + "<br><br>");
+
+// // ans 12
+// var currentDate = new Date();
+// var hundredYearsAgo = new Date(currentDate.getFullYear() - 100, currentDate.getMonth(), currentDate.getDate());
+// document.writeln("Current date: " + currentDate + "<br>");
+// document.writeln("100 years ago, it was: " + hundredYearsAgo + "<br><br>");
+
+// // ans 13
+// var userAge = +prompt("Enter your age:");
+// var currentYear = new Date().getFullYear();
+// var birthYear = currentYear - userAge;
+// document.writeln("Your age is " + userAge + "<br>");
+// document.writeln("Your birth year is " + birthYear + "<br><br>");
+
+// // ans 14
+// var customerName = "John Doe";
+// var currentMonth = new Date().getMonth();
+// var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// var unitsConsumed = 410;
+// var ChargePerUnit = 16;
+// var netAmountPayable = unitsConsumed * ChargePerUnit;
+// var LatePaymentSurcharge = 350;
+// var grossAmountPayable = netAmountPayable + LatePaymentSurcharge;
+
+// document.writeln("<h1>K-Electric Bill</h1><br>");
+// document.writeln("Customer Name: " + customerName + "<br>");
+// document.writeln("Month: " + monthNames[currentMonth] + "<br>");
+// document.writeln("Number of units: " + unitsConsumed + "<br>");
+// document.writeln("Charge per unit: " + ChargePerUnit + " PKR<br><br>");
+// document.writeln("Net Amount Payable (within Due Date): " + netAmountPayable.toFixed(2) + " PKR<br>");
+// document.writeln("Late Payment Surcharge: " + LatePaymentSurcharge.toFixed(2) + " PKR<br>");
+// document.writeln("Gross Amount Payable (after Due Date): " + grossAmountPayable.toFixed(2) + " PKR<br><br>");
+
+// // Chapter 35-38
+// // ans 1
+// function displayCurrentDateTime() {
+//     var currentDate = new Date();
+//     document.writeln(currentDate + "<br><br>");
+// }
+
+// displayCurrentDateTime();
+
+// // ans 2
+// function greetUser(firstName, lastName) {
+//     var firstName = prompt("Enter your first name:");
+//     var lastName = prompt("Enter your last name");
+//     var fullName = firstName + " " + lastName;
+//     alert("Hello, " + fullName + "! Welcome to our Website.");
+// }
+
+// greetUser();
+
+// // ans 3
+// function addNumbers(num1, num2) {
+//     var num1 = +prompt("Enter the first number:");
+//     var num2 = +prompt("Enter the second number:");
+//     var sum = num1 + num2;
+//     document.writeln("The sum of " + num1 + " and " + num2 + " is " + sum + "<br><br>");
+// }
+
+// addNumbers();
+
+// // ans 4
+// function calculator(num1, num2, operator) {
+//     var num1 = +prompt("Enter the first number:");
+//     var num2 = +prompt("Enter the second number:");
+//     var operator = prompt("Enter the operator (+, -, *, /):");
+//     var result;
+
+//     switch (operator) {
+//         case "+":
+//             result = num1 + num2;
+//             break;
+//         case "-":
+//             result = num1 - num2;
+//             break;
+//         case "*":
+//             result = num1 * num2;
+//             break;
+//         case "/":
+//             if (num2 !== 0) {
+//                 result = num1 / num2;
+//             } else {
+//                 document.writeln("Error: Division by zero is not allowed.<br><br>");
+//                 return;
+//             }
+//             break;
+//         default:
+//             document.writeln("Invalid operator. Please enter one of +, -, *, /.<br><br>");
+//             return;
+//     }
+//     document.writeln("The result of " + num1 + " " + operator + " " + num2 + " is: " + result + "<br><br>");
+// }
+
+// calculator();
+
+// // ans 5
+// function squareNumber(num) {
+//     var num = +prompt("Enter a number to find its square:");
+//     var square = num * num;
+//     document.writeln("The square of " + num + " is " + square + "<br><br>");
+// }
+
+// squareNumber();
+
+// // ans 6
+// function factorial(num) {
+//     var num = +prompt("Enter a number to find its factorial:");
+//     var factorial = 1;
+//     for (var i = 1; i <= num; i++) {
+//         factorial *= i;
+//     }
+//     document.writeln("The factorial of " + num + " is " + factorial + "<br><br>");
+// }
+
+// factorial();
+
+// // ans 7
+// function countNumbers(start, end) {
+//     var start = +prompt("Enter the starting number:");
+//     var end = +prompt("Enter the ending number:");
+//     var count = 0;
+//     for (var i = start; i <= end; i++) {
+//         count++;
+//     }
+//     document.writeln("The count of numbers from " + start + " to " + end + " is: " + count + "<br><br>");
+// }
+
+// countNumbers();
+
+// // ans 8
+// function calculateHypotenuse(base, perpendicular) {
+//     var base = +prompt("Enter the base of the right triangle:");
+//     var perpendicular = +prompt("Enter the perpendicular of the right triangle:");
+//     function calculateSquare(num) {
+//         return num * num;
+//     }
+//     var hypotenuse = Math.sqrt(calculateSquare(base) + calculateSquare(perpendicular));
+//     document.writeln("The hypotenuse of the right triangle is: " + hypotenuse.toFixed(2) + "<br><br>");
+// }
+
+// calculateHypotenuse();
+
+// // ans 9
+// function calculateArea(width, height) {
+//     var width = +prompt("Enter the width of the rectangle:");
+//     var height = +prompt("Enter the height of the rectangle:");
+//     var area = width * height;
+//     document.writeln("The area of the rectangle is: " + area + "<br><br>");
+// }
+
+// calculateArea();
+
+// // ans 10
+// function isPalindrome(str) {
+//     var str = prompt("Enter a string to check if it's a palindrome:");
+//     var cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+//     var reversedStr = cleanedStr.split("").reverse().join("");
+//     if (cleanedStr === reversedStr) {
+//         document.writeln(str + " is a palindrome.<br><br>");
+//     } else {
+//         document.writeln(str + " is not a palindrome.<br><br>");
+//     }
+// }
+
+// isPalindrome();
+
+// // ans 11
+// function capitalizeFirstLetter(str) {
+//     var str = prompt("Enter a string to capitalize the first letter of each word:");
+//     var words = str.split(" ");
+//     for(var i = 0; i < words.length; i++) {
+//         words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+//     }
+//     document.writeln(words.join(" ") + "<br><br>");
+// }
+
+// capitalizeFirstLetter();
+
+// // ans 12
+// function findLongestWord(str) {
+//     var str = prompt("Enter a string to find the longest word:");
+//     var words = str.split(" ");
+//     var longestWord = "";
+//     for(var i = 0; i < words.length; i++) {
+//         if(words[i].length > longestWord.length) {
+//             longestWord = words[i];
+//         }
+//     }
+//     document.writeln("The longest word in the string is: " + longestWord + "<br><br>");
+// }
+
+// findLongestWord();
+
+// // ans 13
+// function countOccurrences(str, char) {
+//     var str = prompt("Enter a string:");
+//     var char = prompt("Enter a character to count its occurrences:");
+//     var count = 0;
+//     for(var i = 0; i < str.length; i++) {
+//         if(str.charAt(i) === char) {
+//             count++;
+//         }
+//     }
+//     document.writeln("The character '" + char + "' occurs " + count + " times in the string.<br><br>");
+// }
+
+// countOccurrences();
+
+// // ans 14
+// function calculateCircumference(radius) {
+//     var radius = +prompt("Enter the radius of the circle:");
+//     var circumference = 2 * Math.PI * radius;
+//     document.writeln("The circumference of the circle is: " + circumference.toFixed(2) + "<br><br>");
+// }
+
+// calculateCircumference();
+
+// function calculateAreaOfCircle(radius) {
+//     var radius = +prompt("Enter the radius of the circle:");
+//     var area = Math.PI * Math.pow(radius, 2);
+//     document.writeln("The area of the circle is: " + area.toFixed(2) + "<br><br>");
+// }
+
+// calculateAreaOfCircle();
